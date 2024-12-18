@@ -23,7 +23,7 @@ const sendResponse = (res, statusCode, body) => {
     })
 }
 
-app.post("/", async (req, res) => {
+app.post("/compile", async (req, res) => {
     try {
         const output = await runCode(req.body)
         sendResponse(res, 200, output)
